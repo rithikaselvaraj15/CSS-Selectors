@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <link>
+  <script>
+    </script>
+    <style>
+      div p, {
+        color:purple;
+        font-family: 'Times New Roman', Times, serif;
+      }
+       section>h2, 
+       section>p {
+        color:brown;
+        background-color: aquamarine;
+       } 
+       h3+p{
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       h3~span{
+        color: lavender;
+        background-color: purple;
+
+       }
+       a[target]{
+        background-color: orange;
+       }
+       a[target="_self"]{
+        background-color: white;
+        color:pink;
+        font-size: x-large;
+       }
+       [alt~="foodcourt"]{
+        border: 2px solid purple;
+        width: 500px;
+       }
+      
+
+    </style>
+</head>
+<body>
+  <center>
+  
+  <h1>How to use Selectors and four differnt types of combinators</h1></center>
+  <!--DECENDANT COMBINATORS-->
+  <div>
+    <h2> 1,Decendant combinators</h2>
+    <p>it means Select elements inside another element </p>
+    <p>its not countable </p>
+  </div>
+  <p> after div element are not affected this is called decendant combinators.</p>
+  <!--Child comninators-->
+  <section>
+    <h2>2. Child Combinators</h2>
+    <p>It means select only the elements that are direct children of a parent</p>
+
+<article>
+  <p>if first direct childer have 2 elements example; div is a container element inside this we have to element one h1 and p if we want to stlye the full first direct child element we need use this code "div<code>&lt;h1&gt;</code>, 
+    div<code>&lt;p&gt;</code>".
+  <p> unlike decendent combinators it does not select nested element deeper than one level</p>
+  </article>
+  </section>
+  <!---Next Sibiling Combinators-->
+  <h3>3.Next Sibiling combinators</h3>
+  <p>It means select the element that comes immediately after another element with the same parent.</p>
+  <!--Subsequent sibling combinators-->
+  <article>
+    <h3> 4.Subsequent-sibling combinators</h3>
+    <span>Select all the element that are siblings of a specified element and come after it.</span>
+    <span>All siblings after the first elements are affected as long as they share the same parents</span>
+    <p>for example</p>
+  </article>
+  <hr>
+<center>
+  <!----2.Attributes selectors---->
+  <h1>Attribute Selectors</h1>
+  <span>This mainly use for forms attribute</span>
+
+</center>
+USEING IN LINKS <BR>
+<a href="https://www.youtube.com/watch?v=yG2MoXdFB34" target="_self">without specified the link formate</a>
+<a href="E,attributes workout.html" target="_blank"> Mention the link formate</a><br><br>
+USEING IN IMAGE OR TITLE <br>
+
+ <img src="image.html/food.html"alt= foodcourt>
+<img src="image.html/food.html" title="foodcourt">
+</body>
+</html>
